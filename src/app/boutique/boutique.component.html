@@ -1,6 +1,12 @@
 <div class="container">
-
-    <div class="sidebar"><app-sidebar></app-sidebar></div>
-    <div class="body"><app-content></app-content></div>
-
+  <div class="row align-items-start">
+      <div class="col-3" id="sticky-sidebar">
+          <div class="sticky-top">
+              <app-sidebar></app-sidebar>
+          </div>
+      </div>
+      <div class="col" id="main">
+        <app-content></app-content>
+      </div>
   </div>
+</div>

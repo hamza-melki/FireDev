@@ -1,5 +1,6 @@
-body{
-  background-color:purple;
+.div
+{
+  padding-bottom: 20px;
 }
 .form-inputs{
   position:relative;
@@ -59,7 +60,7 @@ body{
   font-size: 12px;
   
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 9999;
 }
 
 /* Links inside the dropdown */

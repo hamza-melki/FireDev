@@ -1,11 +1,10 @@
 
-
-<header class="section-header">
+<header class="section-header div">
 
   <nav class="navbar navbar-dark navbar-expand p-0 bg-dark">
   <div class="container-fluid">
       <ul class="navbar-nav d-none d-md-flex mr-auto">
-      <li class="nav-item"><a class="nav-link clignote" href="#" data-abc="true">Booster votre boutique !</a></li>
+      <li class="nav-item"><a class="nav-link clignote" href="#" data-abc="true" routerLink="/boosterboutique">Booster votre boutique !</a></li>
       <li class="nav-item"><a class="nav-link" href="#" data-abc="true">Option2</a></li>
       <li class="nav-item"><a class="nav-link" href="#" data-abc="true">Option3 ..</a></li>
       </ul>
@@ -52,7 +51,6 @@
   
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand d-md-none d-md-flex" href="#">Categories</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -96,13 +94,13 @@
           <div class="dropdown">
             <button class="dropbtn">Boutique</button>
             <div class="dropdown-content">
-              <a href="#">Creer votre boutique</a>
-              <a href="#">Nos boutique</a>
-              <a href="#">..</a>
+              <a routerLink="/creation">Creer votre boutique</a>
+              <a routerLink="/boutiques">Nos boutique</a>
+              <a [routerLink]="['/maboutique/', { outlets: { secondRouter: 'mesproduits', aux: null } }]">Ma boutique</a>
             </div>
           </div>
 
-
+        
 
 
         </ul>
