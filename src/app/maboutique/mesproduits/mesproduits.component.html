@@ -1,1 +1,33 @@
-<p>mesproduits works!</p>
+<h1 class="posistiontitre">Liste des boutiques</h1>
+<div class="row col-12" >
+<table class=" table tablesorter" >
+  <thead class=" text-primary">
+    <tr>
+      <th>Nome boutique </th>
+      <th>Adresse boutique</th>
+      <th>Domaine </th>
+      <th>Contact</th>
+      <th>Identifiant boutique </th>
+      <th>Modifier </th>
+      <th>supprimer</th>
+    </tr>
+  </thead>
+<tbody>  
+    <tr *ngFor="let boutique of Boutiques"> 
+      <td>{{boutique.Nom_Boutique}}</td>  
+      <td>{{boutique.Adresse_Boutique}}</td>  
+      <td>{{boutique.Domain_Boutique}}</td>  
+      <td>{{boutique.Contact_Boutique}}</td> 
+      <td>{{boutique._id}}</td>  
+      <td>
+       
+      <a [routerLink]="['/admin/',{ outlets: { thirdRouter: 'editboutique/'+boutique._id,aux: null} }]">modifier</a>   
+      </td>
+      <td>
+        <button class="btn btn-sm btn-warning"(click)="deleteboutique(boutique._id)"  >
+          delete  </button>
+      </td>
+    </tr>  
+  </tbody>  
+</table>
+</div>

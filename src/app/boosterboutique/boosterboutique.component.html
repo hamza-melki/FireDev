@@ -1,14 +1,20 @@
+<div class="div" >
 <h1 class="posistiontitre">Booster votre boutique</h1>
 
 <form class="posistion">
     <div class="form-group">
-      <label for="boutiquenom">Nom de la boutique</label>
-      <input type="text" class="form-control" id="boutiquenom" aria-describedby="boutiquenom" placeholder="Nom de la boutique">
-    
+      <label for="boutiquenom">titre de la publication</label>
+      <input type="text" class="form-control" id="Nom_Pub" aria-describedby="boutiquenom" name ="Nom_Pub" placeholder="titre de la publication"
+      [(ngModel)]="publicite.Nom_Pub">
     </div>
     <div class="form-group">
-      <label for="localisation">Zone</label>
-      <select class="custom-select">
+      <label for="description">Message publicitaire</label>
+      <input type="textarea " class="form-control" name="Desc_Pub" aria-describedby="description" 
+      placeholder="votre message publicitaire "[(ngModel)]="publicite.Desc_Pub">
+    </div>
+    <div class="form-group">
+      <label for="localisation">Zone de la publication</label>
+      <select class="custom-select" name="zone" [(ngModel)]="publicite.zone">
         <option selected>Zone</option>
         <option value="1">Ariana</option>
         <option value="2">Tunis</option>
@@ -17,10 +23,10 @@
       </div>
         <div class="form-group">
           <label for="categorie">Periorité</label>
-          <select class="custom-select">
-            <option value="1">high</option>
-            <option value="2">medium</option>
-            <option value="3">low</option>
+          <select class="custom-select"name="periorite" [(ngModel)]="publicite.periorite">
+            <option value="high">high</option>
+            <option value="medium">medium</option>
+            <option value="low">low</option>
           </select>
           </div>
 
@@ -28,24 +34,24 @@
 
             <label for="logo">Affiche de publicite</label>
         <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">importer</span>
-            </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input" id="inputGroupFile01">
+              <input type="file" class="custom-file-input"name="image"id="inputGroupFile01"[(ngModel)]="publicite.image">
               <label class="custom-file-label" for="inputGroupFile01">Affiche de publicite</label>
             </div>
           </div> 
         </div>
         <div class="form-group">
           <label for="Datedebut">Date debut </label>
-          <input type="date" class="form-control" id="boutiquenom" aria-describedby="boutiquenom" placeholder="Nom de la boutique">
+          <input type="date" class="form-control" name="Date_debut" aria-describedby="boutiquenom" placeholder="Nom de la boutique"
+          [(ngModel)]="publicite.Date_debut">
         </div>
         <div class="form-group">
           <label for="Datefin">date fin</label>
-          <input type="date" class="form-control" id="boutiquenom" aria-describedby="boutiquenom" placeholder="Nom de la boutique">
+          <input type="date" class="form-control" name="Date_fin" aria-describedby="boutiquenom" placeholder="Nom de la boutique"
+          [(ngModel)]="publicite.Date_fin">
         </div>
     
-    <button type=" w-100 submit" class="btn btn-primary">valider</button>
+    <button type=" w-100 submit" class="btn btn-primary"(click)="addpublicite(publicite)">valider</button>
   </form>
+</div>
   
