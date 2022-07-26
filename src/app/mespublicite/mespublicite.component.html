@@ -1,0 +1,37 @@
+<h1 class="posistiontitre">Liste des publicités</h1>
+<div class="row col-8" >
+<table class=" table tablesorter" >
+  <thead class=" text-primary">
+    <tr>
+      <th>Titre</th>
+      <th>Message publicitaire</th>
+      <th>Date debut </th>
+      <th>Date fin </th>
+      <th>Priorité </th>
+      <th>Zone </th>
+      <th>Statut</th>
+      <th>Supprimer</th>
+    </tr>
+  </thead>
+<tbody>  
+    <tr *ngFor="let p of pubs"> 
+      <td>{{p.Nom_Pub}}</td>  
+      <td>{{p.Desc_Pub}}</td>  
+      <td>{{p.Date_debut}}</td>  
+      <td>{{p.Date_fin}}</td>  
+      <td>{{p.periorite}}</td>  
+      <td>{{p.zone}}</td>  
+      <td>  <button class="btn btn-sm btn-outline-danger " (click)=" onUpdate(p)">
+        {{p.statut}} 
+            </button></td>  
+      
+    
+      
+      <td>
+        <button class="btn btn-sm btn-warning"(click)="deletepublicit2(p._id)"  >
+          delete  </button>
+      </td>
+    </tr>  
+  </tbody>  
+</table>
+</div>

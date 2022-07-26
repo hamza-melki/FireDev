@@ -1,16 +1,25 @@
 
-    <ul class="sidebar-nav">
+    <div class="row no-gutters">
+        <div class="sidebar">
+            <ul>
         <li>
-  <a [routerLink]='[{ outlets: { secondRouter: ["editboutique"] } }]'>Modifier les informations</a>
+  <a [routerLink]='[{ outlets: { thirdRouter : ["mesproduits"] } }]'>Gestions boutiques</a>
         </li>
         <li>
-            <a [routerLink]='[{ outlets: { secondRouter: ["consultmaboutique"] } }]'>Consulter la liste de visiteur</a>
-        </li>
-        <li>
-            <a [routerLink]='[{ outlets: { secondRouter: ["ajoutproduit"] } }]'>Ajouter produit</a>
+            <a [routerLink]='[{ outlets: { thirdRouter : ["mespublicite"] } }]'>Gestions des publicités</a>
         </li>
 
-        
-       
-        
+        <!-- 
+        <li>
+            <a [routerLink]='[{ outlets: { thirdRouter : ["ajoutproduit"] } }]'>Ajouter produit</a>
+        </li>
+
+        -->
     </ul>
+    </div>
+    
+</div>
+
+   
+              
+        
